@@ -8,5 +8,18 @@ resource "aws_instance" "Bastion" {
   tags = {
     Name = "Bastion"
   }
+    provisioner "remote-exec" {
+    inline = [
+      "sudo apt update -y",
+      "sudo apt install -y mysql-client-core-8.0"
+    ]
+  }
+  connection {
+      type        = "ssh"
+      user        = "ubuntu" 
+      private_key = tls_private_key.secret_key_pair.private_key_pem
+      host        = self.public_ip
+    }
 }
+
 
