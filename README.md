@@ -76,5 +76,8 @@ terraform graph | dot -Tpng > graph.png
 ```
 
 Connect to Bastion and make:
->> mysql -h my-free-db.curkgm8agif7.us-east-1.rds.amazonaws.com -u toka -p
+```bash
+mysql -h my-free-db.curkgm8agif7.us-east-1.rds.amazonaws.com -u toka -p
+```
+
 Then enter your password for connecting with your database
