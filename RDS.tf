@@ -24,7 +24,4 @@ resource "aws_db_instance" "RDS" {
     multi_az             = false  
     vpc_security_group_ids = [aws_security_group.rds_sg.id]   
     db_subnet_group_name = var.db_sub_group_name
-    provisioner "local-exec" {
-    command = "pg_isready -h ${self.address} -p ${self.port} && echo 'RDS is ready' || echo 'RDS not ready'"
-  }
 }
