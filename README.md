@@ -2,6 +2,8 @@
 
 Provision AWS infrastructure using Terraform including VPC, Subnets, EC2, RDS, and more.
 
+![Architecture Diagram](RDS.jpeg)
+
 ---
 
 ## 📂 Project Structure
